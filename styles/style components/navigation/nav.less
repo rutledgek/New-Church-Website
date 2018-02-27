@@ -1,0 +1,77 @@
+// main: ../../../style.less
+
+
+.container {
+    nav{
+        // background-color: @darkPrimaryColor;
+        color: white;
+        display:flex;
+        flex-direction:row;
+        justify-content: space-fbetween;
+        align-items: center;
+        
+        a{
+            color:white;
+            text-decoration:none;
+        }
+        
+        .logo{
+            display:flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-content: center;
+            font-size: 1.5em;
+            max-width: 40%;
+            text-align: left;
+            padding: 20px;
+            .first-line{
+                @media only screen and (max-width : 800px) { 
+                    font-size:1.75rem * .8}
+                display:block;
+                margin:0;
+                font-size:1.75rem;
+            }
+            .second-line{
+                @media only screen and (max-width : 800px) { 
+                    font-size:.75rem * .8}
+                font-size:.95rem;
+                text-align:left;
+            }
+        }
+        
+        ul {
+           flex-grow:5;
+           flex-shrink: 0;
+           list-style: none;
+           display: flex;
+           flex-direction: row;
+           justify-content: flex-end;
+           flex-wrap:wrap;
+           position: fixed;
+           right: -2000px;
+        //    height: 400px;
+           transition: right .5s ease-in-out;
+           background-color: @primaryColor;
+           top: 0;
+           margin-top: 0;
+           padding-right: 80px;
+           overflow:hidden;
+           
+          
+           li {
+                font-size: 1.2em;
+                align-self:baseline;
+                display:inline-block;
+                padding:30px;
+                opacity: .85;
+                transition: all 0.25s ease;
+            
+                &:hover{
+                    font-weight:bold;
+                    opacity: 1;
+
+                }
+            }
+        }
+    }
+}

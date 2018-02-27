@@ -1,0 +1,20 @@
+// main: ../style.less
+
+// in the document Set up the fonts
+@chosen-sans-serif-font: 'Istok Web';
+@chosen-serif-font: 'Lora';
+
+@chosen-sans-serif-font-escaped: escape(@chosen-sans-serif-font);
+@chosen-serif-font-escaped: escape(@chosen-serif-font);
+@import url('https://fonts.googleapis.com/css?family=@{chosen-sans-serif-font-escaped}:300,400');
+@import url('https://fonts.googleapis.com/css?family=@{chosen-serif-font-escaped}');
+
+
+//fontAwesome
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+
+html{
+    font-size:16px;
+    font-family: @chosen-serif-font;
+    }

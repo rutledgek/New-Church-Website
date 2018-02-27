@@ -1,0 +1,45 @@
+// main: ../../../style.less
+
+// CSS Grid Layout 
+@supports (display: grid) {
+
+    .container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: minmax(max-content, 10vh) minmax(250px, 90vh) max-content max-content auto;
+        
+        nav{
+            grid-column: 1 / 1;
+            
+        }
+        .mission{
+            grid-column: 1 / 1;
+        }
+        .highlights{
+            grid-column: 1 / 1;
+            // padding-bottom:20px;
+            display:grid; 
+            background-color:white;
+        
+        .highlight{
+            display:grid;
+            grid-template-columns: repeat(3, minmax(250px, 1fr));
+        
+            @media only screen and (max-width : 749px) { 
+                grid-template-columns: 1fr;
+            }
+       
+        }
+    }
+        .transparent{
+            grid-column: 1 / 1;
+            
+        }
+    
+        .solid-box {
+            grid-column: 1 / 1;
+            grid-row: 4;
+            background-color:white;;
+        }
+    }  
+}
